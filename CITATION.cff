@@ -45,7 +45,7 @@ preferred-citation:
 repository: https://CRAN.R-project.org/package=jfa
 repository-code: https://github.com/koenderks/jfa
 url: https://koenderks.github.io/jfa/
-date-released: '2024-10-14'
+date-released: '2024-11-11'
 contact:
 - family-names: Derks
   given-names: Koen
@@ -165,20 +165,28 @@ references:
   authors:
   - family-names: Eddelbuettel
     given-names: Dirk
+    email: edd@debian.org
+    orcid: https://orcid.org/0000-0001-6419-907X
   - family-names: Francois
     given-names: Romain
+    orcid: https://orcid.org/0000-0002-2444-4226
   - family-names: Allaire
     given-names: JJ
+    orcid: https://orcid.org/0000-0003-0174-9868
   - family-names: Ushey
     given-names: Kevin
+    orcid: https://orcid.org/0000-0003-2880-7407
   - family-names: Kou
     given-names: Qiang
+    orcid: https://orcid.org/0000-0001-6786-5453
   - family-names: Russell
     given-names: Nathan
   - family-names: Ucar
-    given-names: Inaki
+    given-names: Iñaki
+    orcid: https://orcid.org/0000-0001-6403-5550
   - family-names: Bates
-    given-names: Douglas
+    given-names: Doug
+    orcid: https://orcid.org/0000-0001-8316-9503
   - family-names: Chambers
     given-names: John
   year: '2024'
