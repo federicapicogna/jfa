@@ -24,15 +24,15 @@ in the package.
 
 ## Function: `model_fairness()`
 
-The model_fairness() function offers methods to evaluate fairness in algorithmic
-decision-making systems. It computes various model-agnostic metrics based on the
-observed and predicted labels in a dataset. The fairness metrics that can be
-calculated include demographic parity, proportional parity, predictive rate
-parity, accuracy parity, false negative rate parity, false positive rate parity,
-true positive rate parity, negative predicted value parity, and specificity
-parity [@calders_2010; @chouldechova_2017; @feldman_2015; @zafar_2017;
-@friedler_2019]. Furthermore, the metrics are tested for equality between
-protected groups in the data.
+The `model_fairness()` function offers methods to evaluate fairness in
+algorithmic decision-making systems. It computes various model-agnostic metrics
+based on the observed and predicted labels in a dataset. The fairness metrics
+that can be calculated include demographic parity, proportional parity,
+predictive rate parity, accuracy parity, false negative rate parity, false
+positive rate parity, true positive rate parity, negative predicted value
+parity, and specificity parity [@calders_2010; @chouldechova_2017;
+@feldman_2015; @zafar_2017; @friedler_2019]. Furthermore, the metrics are tested
+for equality between protected groups in the data.
 
 *Practical example:*
 

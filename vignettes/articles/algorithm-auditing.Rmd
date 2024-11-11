@@ -23,16 +23,40 @@ library(jfa)
 Welcome to the 'Algorithm auditing' vignette of the **jfa** package. This page
 provides a guide to the functions in the package that are designed to facilitate
 the audit of algorithms and predictive models. In particular, these functions
-implement techniques for calculating and testing fairness metrics. The package
-allows users to specify a prior probability distribution to conduct Bayesian
-algorithm auditing using these functions.
+implement techniques for determining an appropriate fairness measure and
+subsequently calculating and testing algorithmic fairness using this measure.
+The package also allows users to specify a prior probability distribution to
+conduct Bayesian algorithm auditing using these functions.
 
 ## Functions and intended usage
 
 Below you can find an explanation of the available algorithm auditing functions
 in **jfa**.
 
+- [`fairness_selection()`](#selecting-a-fairness-measure)
 - [`model_fairness()`](#testing-algorithmic-fairness)
+
+### Selecting a fairness measure
+
+The `fairness_selection()` function is designed to help auditors to select the
+appropariate fairness metric to perform algorithm auditing. The questions within
+the decision-making workflow are based on observable data characteristics, the
+properties of fairness measures and the information required for their
+calculation. However, these questions are posed to the user in an easily
+understandable manner, requiring no statistical background or in-depth knowledge
+of the fairness measures. The function returns an object that can be used with
+associated `print()` and `plot()` methods.
+
+For additional details about this function, please refer to the
+[function documentation](https://koenderks.github.io/jfa/reference/fairness_selection.html)
+on the package website.
+
+*Example usage:*
+
+```{r}
+# Workflow leading to accuracy parity
+fairness_selection(q1 = 1, q2 = 1, q3 = 2, q4 = 3)
+```
 
 ### Testing algorithmic fairness
 
