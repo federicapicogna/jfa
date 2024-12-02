@@ -54,8 +54,8 @@ on the package website.
 *Example usage:*
 
 ```{r}
-# Workflow leading to accuracy parity
-fairness_selection(q1 = 1, q2 = 1, q3 = 2, q4 = 3)
+# Workflow leading to predictive rate parity
+fairness_selection(q1 = 1, q2 = 1, q3 = 1, q4 = 1)
 ```
 
 ### Testing algorithmic fairness
