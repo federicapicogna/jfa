@@ -473,7 +473,7 @@ tailored to a specific context and dataset by answering the questions in the
 developed decision-making workflow. The fairness measure that can be selected 
 include disparate impact, equalized odds, false positive rate parity, false 
 negative rate parity, predictive rate parity, equal opportunity, specificity 
-parity, negative predictive rate parity, accuracy parity [@castelnovo_2022;
+parity, negative predictive value parity, accuracy parity [@castelnovo_2022;
 @feldman_2015; @friedler_2019; @hardt_2016, @verma_2018]. After answering the 
 questions in the decision-making workflow and selecting the fairness measure to 
 apply, a graphical representation of the followed path can be created based 
