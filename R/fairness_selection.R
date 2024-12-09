@@ -93,7 +93,7 @@
 #'     of this measure.}
 #'    \item{Specificity Parity. See Friedler et al. (2019), Verma et al. (2018)
 #'     and Büyük, S. (2023) for a more detailed explanation of this measure.}
-#'    \item{Negative Predictive Rate Parity. See Verma et al. (2018) and Büyük,
+#'    \item{Negative Predictive Value Parity. See Verma et al. (2018) and Büyük,
 #'     S. (2023) for a more detailed explanation of this measure.}
 #'    \item{Accuracy Parity. See Friedler et al. (2019) and Büyük, S. (2023)
 #'     for a more detailed explanation of this measure.}
@@ -199,7 +199,7 @@ fairness_selection <- function(q1 = NULL,
           measure <- "sp"
           q4_name <- "False Positive"
         } else {
-          name <- "Negative Predictive Rate Parity"
+          name <- "Negative Predictive Value Parity"
           measure <- "npvp"
           q4_name <- "False Negative"
         }

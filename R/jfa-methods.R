@@ -1608,7 +1608,7 @@ plot.jfaFairnessSelection <- function(x, ...) {
       xmax = c(6.2, 0.2, 9.5, -4, 7, 13.8, -12, -4, 2, -8.4, -1.2),
       ymin = c(3, -4, -4, -8, -8, -8, -16, -16, -16, -22, -22),
       ymax = c(6, -1, -1, -12, -12, -12, -19, -19, -19, -25, -25),
-      label = c("1. Is the ground \ntruth information on the true \nvalues of the classification \nrelevant in your context?", "2. In what type of \nclassification are you \ninterested?", "Disparate Impact", "3. What is more important: \na correct classification of the positive class, \n a correct classification of the negative class, \nor both?", "4. What are the errors \nwith the highest cost?", "Equalized Odds", "4. What are the errors \nwith the highest cost?", "4. What are the errors \nwith the highest cost?", "Accuracy Parity", "Specificity Parity", "Negative Predictive\n Rate Parity"),
+      label = c("1. Is the ground \ntruth information on the true \nvalues of the classification \nrelevant in your context?", "2. In what type of \nclassification are you \ninterested?", "Disparate Impact", "3. What is more important: \na correct classification of the positive class, \n a correct classification of the negative class, \nor both?", "4. What are the errors \nwith the highest cost?", "Equalized Odds", "4. What are the errors \nwith the highest cost?", "4. What are the errors \nwith the highest cost?", "Accuracy Parity", "Specificity Parity", "Negative Predictive\n Value Parity"),
       fill = c("white", "white", "lightgrey", "white", "lightgrey", "lightgrey", "lightgrey", "white", "lightgrey", "white", "lightgrey"),
       text_color = c("black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black")
     )
@@ -1640,13 +1640,13 @@ plot.jfaFairnessSelection <- function(x, ...) {
       ggplot2::geom_label(ggplot2::aes(x = -10.35, y = -20.5, label = "FP (1)"), color = "black", size = 3) +
       ggplot2::geom_segment(ggplot2::aes(x = -4, xend = -3.4, y = -19, yend = -21.87), arrow = ggplot2::arrow(length = ggplot2::unit(0.05, "inches")), color = "lightgrey", linewidth = 1) +
       ggplot2::geom_label(ggplot2::aes(x = -3.7, y = -20.5, label = "FN (2)"), fill = "lightgrey", size = 3)
-  } else if (measure == "Negative Predictive Rate Parity") {
+  } else if (measure == "Negative Predictive Value Parity") {
     rects <- data.frame(
       xmin = c(-0.8, -6, 5.5, -11.4, 1, 9.8, -18, -10, -2, -13, -5.6),
       xmax = c(6.2, 0.2, 9.5, -4, 7, 13.8, -12, -4, 2, -8.4, -1.2),
       ymin = c(3, -4, -4, -8, -8, -8, -16, -16, -16, -22, -22),
       ymax = c(6, -1, -1, -12, -12, -12, -19, -19, -19, -25, -25),
-      label = c("1. Is the ground \ntruth information on the true \nvalues of the classification \nrelevant in your context?", "2. In what type of \nclassification are you \ninterested?", "Disparate Impact", "3. What is more important: \na correct classification of the positive class, \n a correct classification of the negative class, \nor both?", "4. What are the errors \nwith the highest cost?", "Equalized Odds", "4. What are the errors \nwith the highest cost?", "4. What are the errors \nwith the highest cost?", "Accuracy Parity", "Specificity Parity", "Negative Predictive\n Rate Parity"),
+      label = c("1. Is the ground \ntruth information on the true \nvalues of the classification \nrelevant in your context?", "2. In what type of \nclassification are you \ninterested?", "Disparate Impact", "3. What is more important: \na correct classification of the positive class, \n a correct classification of the negative class, \nor both?", "4. What are the errors \nwith the highest cost?", "Equalized Odds", "4. What are the errors \nwith the highest cost?", "4. What are the errors \nwith the highest cost?", "Accuracy Parity", "Specificity Parity", "Negative Predictive\n Value Parity"),
       fill = c("white", "white", "lightgrey", "white", "lightgrey", "lightgrey", "lightgrey", "white", "lightgrey", "lightgrey", "white"),
       text_color = c("black", "black", "black", "black", "black", "black", "black", "black", "black", "black", "black")
     )
