@@ -253,11 +253,11 @@ model_fairness <- function(data,
     group <- levels(data[, protected])[i]
     groupDat <- data[data[, protected] == group, ]
     # Confusion matrices for each group
-    confmat[[group]][["matrix"]] <- table("Predicted" = groupDat[, predictions], "Actual" = groupDat[, target])
+    confmat[[group]][["matrix"]] <- table("Actual" = groupDat[, target], "Predicted" = groupDat[, predictions])
     confmat[[group]][["tp"]] <- tp <- confmat[[group]][["matrix"]][positive, positive]
-    confmat[[group]][["fp"]] <- fp <- sum(confmat[[group]][["matrix"]][positive, negative])
+    confmat[[group]][["fp"]] <- fp <- sum(confmat[[group]][["matrix"]][negative, positive])
     confmat[[group]][["tn"]] <- tn <- sum(confmat[[group]][["matrix"]][negative, negative])
-    confmat[[group]][["fn"]] <- fn <- sum(confmat[[group]][["matrix"]][negative, positive])
+    confmat[[group]][["fn"]] <- fn <- sum(confmat[[group]][["matrix"]][positive, negative])
     confmat[[group]][["n"]] <- sum(confmat[[group]][["matrix"]])
     # Performance measures for each group
     performance[[group]][["support"]] <- performance[["all"]][i, 1] <- sum(confmat[[group]][["matrix"]])
