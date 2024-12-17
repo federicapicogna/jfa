@@ -24,7 +24,7 @@
 #' quantify potential fairness or discrimination in the algorithms predictions.
 #' Available parity metrics include predictive rate parity, proportional parity,
 #' accuracy parity, false negative rate parity, false positive rate parity, true
-#' positive rate parity, negative predicted value parity, specificity parity,
+#' positive rate parity, negative predictive value parity, specificity parity,
 #' and demographic parity. The function returns an object of class
 #' \code{jfaFairness} that can be used with associated \code{summary()} and
 #' \code{plot()} methods.
@@ -98,11 +98,11 @@
 #'     \item{False positive rate parity (\code{fprp}): calculated as FP / (TN
 #'       + FP), quantifies whether the false positive rate is the same across
 #'       groups.}
-#'     \item{True positive rate parity (\code{tprp}): calculated as TP / (TP +
+#'     \item{True positive rate parity (\code{tprp}, also known as Equal opportunity): calculated as TP / (TP +
 #'       FN), quantifies whether the true positive rate is the same across
 #'       groups.}
-#'     \item{Negative predicted value parity (\code{npvp}): calculated as TN /
-#'       (TN + FN), quantifies whether the negative predicted value is equal
+#'     \item{Negative predictive value parity (\code{npvp}): calculated as TN /
+#'       (TN + FN), quantifies whether the negative predictive value is equal
 #'       across groups.}
 #'     \item{Specificity parity (\code{sp}): calculated as TN / (TN + FP),
 #'       quantifies whether the true positive rate is the same across groups.}
@@ -253,11 +253,11 @@ model_fairness <- function(data,
     group <- levels(data[, protected])[i]
     groupDat <- data[data[, protected] == group, ]
     # Confusion matrices for each group
-    confmat[[group]][["matrix"]] <- table("Actual" = groupDat[, target], "Predicted" = groupDat[, predictions])
+    confmat[[group]][["matrix"]] <- table("Predicted" = groupDat[, predictions], "Actual" = groupDat[, target])
     confmat[[group]][["tp"]] <- tp <- confmat[[group]][["matrix"]][positive, positive]
-    confmat[[group]][["fp"]] <- fp <- sum(confmat[[group]][["matrix"]][negative, positive])
+    confmat[[group]][["fp"]] <- fp <- sum(confmat[[group]][["matrix"]][positive, negative])
     confmat[[group]][["tn"]] <- tn <- sum(confmat[[group]][["matrix"]][negative, negative])
-    confmat[[group]][["fn"]] <- fn <- sum(confmat[[group]][["matrix"]][positive, negative])
+    confmat[[group]][["fn"]] <- fn <- sum(confmat[[group]][["matrix"]][negative, positive])
     confmat[[group]][["n"]] <- sum(confmat[[group]][["matrix"]])
     # Performance measures for each group
     performance[[group]][["support"]] <- performance[["all"]][i, 1] <- sum(confmat[[group]][["matrix"]])
