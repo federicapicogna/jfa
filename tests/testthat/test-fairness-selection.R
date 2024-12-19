@@ -22,7 +22,7 @@ test_that(desc = "Validation of fairness selection", {
   expect_equal(outcome$measure, "pp")
   # Equalized odds
   outcome <- fairness_selection(q1 = 1, q2 = 3)
-  expect_equal(outcome$measure, "dp")
+  expect_equal(outcome$measure, "eo")
   # False negative rate parity
   outcome <- fairness_selection(q1 = 1, q2 = 2, q3 = NULL, q4 = 2)
   expect_equal(outcome$measure, "fnrp")
