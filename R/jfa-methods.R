@@ -1205,7 +1205,7 @@ print.summary.jfaFairness <- function(x, digits = getOption("digits"), ...) {
   cat(paste("  Confidence level:   ", format(x[["conf.level"]], digits = max(1L, digits - 2L))), "\n")
   measure <- switch(x[["measure"]],
     "pp" = "Proportional parity (Disparate impact)",
-    "prp" = "Predictive rate parity (Equalized odds)",
+    "prp" = "Predictive rate parity",
     "ap" = "Accuracy parity",
     "fnrp" = "False negative rate parity",
     "fprp" = "False positive rate parity",

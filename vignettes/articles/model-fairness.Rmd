@@ -184,9 +184,8 @@ summary(x)
 plot(x, type = "estimates")
     ```
 
-3. **Predictive rate parity (Equalized odds)**: Compares the overall positive
-  prediction rates (e.g., the precision) of each unprivileged group to the
-  privileged group.
+3. **Predictive rate parity**: Compares the overall positive prediction rates
+  (e.g., the precision) of each unprivileged group to the privileged group.
 
     The formula for the precision is $PR = \frac{TP}{TP + FP}$, and the
       predictive rate parity for unprivileged group $i$ is given by
