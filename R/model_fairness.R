@@ -98,9 +98,9 @@
 #'     \item{False positive rate parity (\code{fprp}): calculated as FP / (TN
 #'       + FP), quantifies whether the false positive rate is the same across
 #'       groups.}
-#'     \item{True positive rate parity (\code{tprp}, also known as Equal opportunity):
-#'      calculated as TP / (TP + FN), quantifies whether the true positive rate
-#'      is the same across groups.}
+#'     \item{True positive rate parity (\code{tprp}, also known as equal
+#'      opportunity): calculated as TP / (TP + FN), quantifies whether the true
+#'      positive rate is the same across groups.}
 #'     \item{Negative predictive value parity (\code{npvp}): calculated as TN /
 #'       (TN + FN), quantifies whether the negative predictive value is equal
 #'       across groups.}
@@ -110,7 +110,8 @@
 #'       whether the positive predictions are equal across groups.}
 #'     \item{Equalized odds (\code{eo}): calculated as a combination of the true
 #'      positive rate and the false positive rate, quantifies whether the true
-#'      positive rate and, simultaneously, the false positive rate are the same across groups}
+#'      positive rate and, simultaneously, the false positive rate are the same
+#'      across groups}
 #'   }
 #'
 #'   Note that, in an audit context, not all fairness measures are equally
@@ -242,7 +243,7 @@ model_fairness <- function(data,
   }
   stopifnot("'positive' is not a class in 'target'" = positive %in% targetLevels)
   if (metric == "eo") {
-    stop("Error: 'Equalized Odds' (EO) requires simultaneous evaluation of 'True Positive Rate' (TPR) and 'False Positive Rate' (FPR). You must first select tprp, then fprp, and ensure both fairness measures conclude no discrimination for both privileged and unprivileged groups before concluding no discrimination according to EO.")
+    stop("Equalized odds (EO) requires simultaneous evaluation of 'True Positive Rate' (TPR) and 'False Positive Rate' (FPR). You must first select 'metric = tprp', then 'metric = fprp', and ensure both fairness measures conclude no discrimination for both privileged and unprivileged groups before concluding no discrimination according to EO.")
   }
   confmat <- list()
   samples_list <- list()
