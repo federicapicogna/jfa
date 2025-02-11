@@ -28,7 +28,7 @@ algorithmic decision-making systems. It computes various model-agnostic metrics
 based on the observed and predicted labels in a dataset. The fairness metrics
 that can be calculated include demographic parity, proportional parity,
 predictive rate parity, accuracy parity, false negative rate parity, false
-positive rate parity, true positive rate parity, negative predicted value
+positive rate parity, true positive rate parity, negative predictive value
 parity, and specificity parity [@calders_2010; @chouldechova_2017;
 @feldman_2015; @zafar_2017; @friedler_2019]. Furthermore, the metrics are tested
 for equality between protected groups in the data.
@@ -346,12 +346,12 @@ model_fairness(
       privileged group (Caucasians). This indicates relatively fair treatment
       in the algorithm's true positive predictions.
 
-8. **Negative predicted value parity**: Compares the negative predicted value
+8. **Negative predictive value parity**: Compares the negative predictive value
   (e.g., for non-reoffenders) of each unprivileged group with that of the
   privileged group.
 
-    The formula for the negative predicted value is $NPV = \frac{TN}{TN + FN}$,
-      and the negative predicted value parity for unprivileged group $i$ is
+    The formula for the negative predictive value is $NPV = \frac{TN}{TN + FN}$,
+      and the negative predictive value parity for unprivileged group $i$ is
       given by $NPVP = \frac{NPV_{i}}{NPV_{privileged}}$.
 
     ```{r}
@@ -367,17 +367,17 @@ model_fairness(
     ```
 
     ***Interpretation:***
-    - *African American*: The negative predicted value parity for African
+    - *African American*: The negative predictive value parity for African
       Americans is 0.98013. A value close to 1 indicates that the negative
       predicted value for African Americans is very similar to the privileged
       group (Caucasians). This suggests fair treatment in predicting
       non-reoffenders among African Americans.
-    - *Asian*: The negative predicted value parity for Asians is 1.1163,
-      indicating that their negative predicted value is slightly higher than for
+    - *Asian*: The negative predictive value parity for Asians is 1.1163,
+      indicating that their negative predictive value is slightly higher than for
       Caucasians. This could suggest potential favoritism towards Asians in
       predicting non-reoffenders.
-    - *Hispanic*: The negative predicted value parity for Hispanics is 1.0326,
-      suggesting that their negative predicted value is slightly higher than for
+    - *Hispanic*: The negative predictive value parity for Hispanics is 1.0326,
+      suggesting that their negative predictive value is slightly higher than for
       Caucasians. This indicates potential favoritism towards Hispanics in
       predicting non-reoffenders.
 
@@ -472,12 +472,12 @@ The `fairness_selection()` function offers a method to select a fairness measure
 tailored to a specific context and dataset by answering the questions in the 
 developed decision-making workflow. The fairness measure that can be selected 
 include disparate impact, equalized odds, false positive rate parity, false 
-negative rate parity, predictive rate parity, equal opportunity, specificity 
-parity, negative predictive value parity, accuracy parity [@castelnovo_2022;
-@feldman_2015; @friedler_2019; @hardt_2016, @verma_2018]. After answering the 
-questions in the decision-making workflow and selecting the fairness measure to 
-apply, a graphical representation of the followed path can be created based 
-on the responses.
+negative rate parity, predictive rate parity, equal opportunity (also known as true positive 
+rate parity), specificity parity, negative predictive rate parity, accuracy parity 
+[@castelnovo_2022; @feldman_2015; @friedler_2019; @hardt_2016, @verma_2018]. 
+After answering the questions in the decision-making workflow and selecting the fairness 
+measure to apply, a graphical representation of the followed path can be 
+created based on the responses.
 
 As mentioned earlier, not all fairness measures are equally suitable for every 
 audit situation. For this reason, the `fairness_selection()` function we propose 

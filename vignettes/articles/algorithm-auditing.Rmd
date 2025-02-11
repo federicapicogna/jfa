@@ -68,7 +68,7 @@ metrics between an unprivileged protected class and a privileged protected class
 is referred to as parity, which quantifies relative fairness in the algorithm's
 predictions. Available parity metrics include predictive rate parity,
 proportional parity, accuracy parity, false negative rate parity, false positive
-rate parity, true positive rate parity, negative predicted value parity,
+rate parity, true positive rate parity, negative predictive value parity,
 specificity parity, and demographic parity [@friedler_2019; @pessach_2022]. The
 function returns an object that can be used with the associated `summary()` and
 `plot()` methods.

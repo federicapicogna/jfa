@@ -227,7 +227,7 @@ fairness_selection <- function(q1 = NULL,
       }
     } else if (q2 == 3) {
       name <- "Equalized Odds"
-      measure <- "dp"
+      measure <- "eo"
       q2_name <- "Correct and incorrect classification"
     }
   } else if (q1 == 2) {

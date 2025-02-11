@@ -13,7 +13,7 @@ model_fairness(
   positive = NULL,
   metric = c(
     "prp", "pp", "ap", "fnrp", "fprp",
-    "tprp", "npvp", "sp", "dp"
+    "tprp", "npvp", "sp", "dp", "eo"
   ),
   alternative = c("two.sided", "less", "greater"),
   conf.level = 0.95,
@@ -101,7 +101,7 @@ class and the privileged protected class is called parity. This measure can
 quantify potential fairness or discrimination in the algorithms predictions.
 Available parity metrics include predictive rate parity, proportional parity,
 accuracy parity, false negative rate parity, false positive rate parity, true
-positive rate parity, negative predicted value parity, specificity parity,
+positive rate parity, negative predictive value parity, specificity parity,
 and demographic parity. The function returns an object of class
 \code{jfaFairness} that can be used with associated \code{summary()} and
 \code{plot()} methods.
@@ -129,16 +129,19 @@ The following model-agnostic fairness metrics are computed based on
     \item{False positive rate parity (\code{fprp}): calculated as FP / (TN
       + FP), quantifies whether the false positive rate is the same across
       groups.}
-    \item{True positive rate parity (\code{tprp}): calculated as TP / (TP +
-      FN), quantifies whether the true positive rate is the same across
-      groups.}
-    \item{Negative predicted value parity (\code{npvp}): calculated as TN /
-      (TN + FN), quantifies whether the negative predicted value is equal
+    \item{True positive rate parity (\code{tprp}, also known as Equal opportunity):
+     calculated as TP / (TP + FN), quantifies whether the true positive rate
+     is the same across groups.}
+    \item{Negative predictive value parity (\code{npvp}): calculated as TN /
+      (TN + FN), quantifies whether the negative predictive value is equal
       across groups.}
     \item{Specificity parity (\code{sp}): calculated as TN / (TN + FP),
       quantifies whether the true positive rate is the same across groups.}
     \item{Demographic parity (\code{dp}): calculated as TP + FP, quantifies
       whether the positive predictions are equal across groups.}
+    \item{Equalized odds (\code{eo}): calculated as a combination of the true
+     positive rate and the false positive rate, quantifies whether the true
+     positive rate and, simultaneously, the false positive rate are the same across groups}
   }
 
   Note that, in an audit context, not all fairness measures are equally
