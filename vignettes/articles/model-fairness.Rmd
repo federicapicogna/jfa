@@ -536,7 +536,7 @@ Finally, as mentioned earlier, it is possible to visualize the path followed
 by answering the questions in the decision-making workflow. This is done by 
 using the `plot` function on the output of this function.
 
-```{r, fig.align="center"}
+```{r, fig.align="center", fig.width=15, fig.height=7}
 plot(measure)
 ```
 
