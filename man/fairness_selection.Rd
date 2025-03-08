@@ -75,32 +75,33 @@ Several fairness measures can be used to assess the fairness of
 
   \itemize{
    \item{Disparate Impact. See Friedler et al. (2019), Feldman et al.
-    (2015), Castelnovo et al. (2022) and Büyük, S. (2023) for a more
-    detailed explanation of this measure.}
+    (2015), Castelnovo et al. (2022) for a more detailed explanation of this
+    measure.}
    \item{Equalized Odds. See Hardt et al. (2016), Verma et al. (2018) and
-    Büyük, S. (2023) for a more detailed explanation of this measure.}
+    Picogna et al. (2025) for a more detailed explanation of this measure.}
    \item{False Positive Rate Parity. See Castelnovo et al. (2022) (under the
-    name Predictive Equality), Verma et al. (2018) and Büyük, S. (2023) for a
-    more detailed explanation of this measure.}
-   \item{False Negative Rate Parity. See Castelnovo et al. (2022) (under the
-    name Equality of Opportunity), Verma et al. (2018) and Büyük, S. (2023)
+    name Predictive Equality), Verma et al. (2018) and Picogna et al. (2025)
     for a more detailed explanation of this measure.}
+   \item{False Negative Rate Parity. See Castelnovo et al. (2022) (under the
+    name Equality of Opportunity), Verma et al. (2018) and and Picogna et al.
+    (2025) for a more detailed explanation of this measure.}
    \item{Predictive Rate Parity. See Castelnovo et al. (2022) (under the
-    name Predictive Parity) and Büyük, S. (2023) for a more detailed
+    name Predictive Parity) and Picogna et al. (2025) for a more detailed
     explanation of this measure.}
    \item{Equal Opportunity. See Hardt et al. (2016), Friedler et al. (2019),
-    Verma et al. (2018) and Büyük, S. (2023) for a more detailed explanation
-    of this measure.}
+    Verma et al. (2018) and Picogna et al. (2025) for a more detailed
+    explanation of this measure.}
    \item{Specificity Parity. See Friedler et al. (2019), Verma et al. (2018)
-    and Büyük, S. (2023) for a more detailed explanation of this measure.}
-   \item{Negative Predictive Value Parity. See Verma et al. (2018) and Büyük,
-    S. (2023) for a more detailed explanation of this measure.}
-   \item{Accuracy Parity. See Friedler et al. (2019) and Büyük, S. (2023)
-    for a more detailed explanation of this measure.}
+    and Picogna et al. (2025) for a more detailed explanation of this
+    measure.}
+   \item{Negative Predictive Value Parity. See Verma et al. (2018) and
+    Picogna et al. (2025) for a more detailed explanation of this measure.}
+   \item{Accuracy Parity. See Friedler et al. (2019) and Picogna et al.
+    (2025) for a more detailed explanation of this measure.}
   }
 
   The fairness decision-making workflow below aids in choosing which fairness
-  measure is appropriate for the situation at hand.
+  measure is appropriate for the situation at hand (Picogna et al., 2025).
 
   \if{html}{\figure{fairness-tree.png}{options: width="100\%" alt="fairness-tree"}}
   \if{latex}{\figure{fairness-tree.pdf}{options: width=5in}}
@@ -110,9 +111,6 @@ Several fairness measures can be used to assess the fairness of
 fairness_selection(q1 = 1, q2 = 1, q3 = 1, q4 = 1)
 }
 \references{
-Büyük, S. (2023). \emph{Automatic Fairness Criteria and Fair
-  Model Selection for Critical ML Tasks}, Master Thesis, Utrecht University.
-
 Castelnovo, A., Crupi, R., Greco, G. et al. (2022). A clarification
   of the nuances in the fairness metrics landscape. In \emph{Sci Rep 12,
   4209}. \doi{10.1038/s41598-022-07939-1}
@@ -131,6 +129,10 @@ Friedler, S. A., Scheidegger, C., Venkatasubramanian, S.,
 Hardt M. , Price E., Srebro N. (2016). Equality of opportunity in
   supervised learning. In \emph{Advances in neural information processing
   systems, 29}. \doi{10.48550/arXiv.1610.02413}
+
+Picogna, F., de Swart, J., Kaya, H., & Wetzels, R. (2025). How to
+  choose a fairness measure: A decision-making workflow for auditors.
+  \doi{10.31219/osf.io/cpxmf_v1}
 
 Verma S., Rubin J. (2018). Fairness definitions explained. In
   \emph{Proceedings of the international workshop on software fairness,

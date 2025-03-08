@@ -147,7 +147,8 @@ The following model-agnostic fairness metrics are computed based on
 
   Note that, in an audit context, not all fairness measures are equally
   appropriate in all situations. The fairness tree below aids in choosing
-  which fairness measure is appropriate for the situation at hand.
+  which fairness measure is appropriate for the situation at hand (Picogna et
+  al., 2025).
 
   \if{html}{\figure{fairness-tree.png}{options: width="100\%" alt="fairness-tree"}}
   \if{latex}{\figure{fairness-tree.pdf}{options: width=5in}}
@@ -195,6 +196,10 @@ Jamil, T., Ly, A., Morey, R. D., Love, J., Marsman, M., &
 
 Pessach, D. & Shmueli, E. (2022). A review on fairness in machine
   learning. \emph{ACM Computing Surveys}, 55(3), 1-44. \doi{10.1145/3494672}
+
+Picogna, F., de Swart, J., Kaya, H., & Wetzels, R. (2025). How to
+  choose a fairness measure: A decision-making workflow for auditors.
+  \doi{10.31219/osf.io/cpxmf_v1}
 
 Zafar, M. B., Valera, I., Gomez Rodriguez, M., & Gummadi, K. P.
   (2017). Fairness beyond disparate treatment & disparate impact. In
