@@ -8,7 +8,7 @@ message: 'To cite package "jfa" in publications use:'
 type: software
 license: GPL-3.0-or-later
 title: 'jfa: Statistical Methods for Auditing'
-version: 0.7.3
+version: 0.7.4
 doi: 10.32614/CRAN.package.jfa
 identifiers:
 - type: doi
@@ -39,7 +39,7 @@ preferred-citation:
     email: k.derks@nyenrode.nl
     orcid: https://orcid.org/0000-0002-5533-9349
   year: '2025'
-  notes: R package version 0.7.3
+  notes: R package version 0.7.4
   url: https://CRAN.R-project.org/package=jfa
   doi: 10.32614/CRAN.package.jfa
 repository: https://CRAN.R-project.org/package=jfa
