@@ -177,7 +177,7 @@ p_k0_n2 <- pbinom(q = 0, size = 103, prob = 0.03)
 p_k0_n1 + p_k1_n1 * p_k0_n2 < 0.05
 ```
 
-The minimum sample size per stage, $n_s$ = 103, is only slighly larger than the
+The minimum sample size per stage, $n_s$ = 103, is only slightly larger than the
 minimum sample size for the first stage if the auditor opts for a single-stage
 sampling plan expecting $k$ = 0, which is $n$ = 99.
 
